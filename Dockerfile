@@ -7,9 +7,10 @@ RUN apk add --update --no-cache --virtual=run-deps \
     py-dnspython \
     certbot \
     tzdata \
-    py2-pip
+    py2-pip \
+    git
 
-RUN pip install certbot-route53
+RUN pip install -e git+https://github.com/daniel-pieper/certbot-route53-1.git#egg=certbot-route53
 
 WORKDIR /
 
