@@ -10,7 +10,7 @@ RUN apk add --update --no-cache --virtual=run-deps \
     py2-pip \
     git
 
-RUN pip install -e git+https://github.com/daniel-pieper/certbot-route53-1.git#egg=certbot-route53
+RUN pip install -e git+https://github.com/joblocal/certbot-route53-plugin.git#egg=certbot-route53
 
 WORKDIR /
 
